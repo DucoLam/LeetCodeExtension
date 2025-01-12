@@ -1,0 +1,29 @@
+{
+  "name": "LeetCode Time Tracker",
+  "description": "Track your time spent in LeetCode!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/logos/16.png",
+      "48": "/logos/48.png",
+      "128": "/logos/128.png"
+    }
+  },
+  "permissions": ["contextMenus", "storage", "tabs", "activeTab", "storage"],
+  "web_accessible_resources": [
+    {
+      "resources": ["timeData.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "/logos/16.png",
+    "48": "/logos/48.png",
+    "128": "/logos/128.png"
+  }
+}

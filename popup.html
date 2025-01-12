@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popdown Menu</title>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 12px; /* Padding for spacing */
+      background: linear-gradient(120deg, rgba(50, 150, 250, 0.2), rgba(200, 220, 255, 0.5), rgba(255, 200, 150, 0.2)); /* Gradient background */
+      width: 240px; /* Fixed width */
+      color: #333; /* Neutral text color */
+      display: flex;
+      border-radius: 0 0 10px 10px; /* Rounded corners for smooth look */
+      justify-content: center;
+      align-items: center;
+      height: 120px; /* Fixed height */
+      backdrop-filter: blur(6px); /* Adds a frosted glass effect */
+    }
+
+    .menu-item {
+      opacity: 0.9; /* Slight translucency for modern look */
+      padding: 10px; /* Comfortable padding */
+      background: linear-gradient(90deg, #2c3e50, #34495e, #2980b9); /* Enhanced gradient */
+      color: #ffffff; /* White text for contrast */
+      font-size: 1.2em; /* Balanced font size */
+      margin-bottom: 12px; /* Spacing between items */
+      text-align: center;
+      border-radius: 10px; /* Smooth rounded corners */
+      cursor: pointer;
+      transition: all 0.3s ease; /* Smooth hover effects */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      backdrop-filter: blur(3px); /* Adds slight blur to background */
+    }
+
+    .menu-item:hover {
+      background: linear-gradient(90deg, #34495e, #2c3e50, #2980b9); /* Enhanced gradient on hover */
+      transform: translateY(-3px); /* Lift on hover */
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    }
+
+    .menu-item:active {
+      transform: translateY(1px); /* Subtle press effect */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    }
+
+    .menu-container {
+      position: absolute;
+      bottom: 12px; /* Position at the bottom right */
+      right: 12px; /* Position at the bottom right */
+    }
+
+    .menu-item:focus {
+      outline: none; /* Remove default focus outline */
+      border: 2px solid #34495e; /* Add subtle focus border */
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-item" id="timeDisplay">Loading...</div>
+  <div class="menu-container">
+    <button class="menu-item" id="resetButton" style="font-size: 0.8em; padding: 6px; margin-bottom: 8px;">Reset Time!</button> <!-- Button with matching style -->
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
